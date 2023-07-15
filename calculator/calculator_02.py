@@ -2,7 +2,6 @@
 import tkinter as tk
 import math
 
-# Create a function that updates the display with the button value
 def update_display(button_value):
     # Get the current value of the display
     current_value = display.get()
@@ -14,14 +13,12 @@ def update_display(button_value):
     else:
         display.insert(tk.END, button_value)
 
-# Create a function that clears the display
 def clear_display():
     # Delete all the characters from the display
     display.delete(0, tk.END)
     # Set the display value to 0
     display.insert(0, "0")
 
-# Create a function that evaluates the expression on the display
 def evaluate_display():
     # Get the expression from the display
     expression = display.get()
