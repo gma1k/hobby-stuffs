@@ -2,6 +2,7 @@
 import requests
 import json
 import datetime
+import matplotlib.pyplot as plt
 
 # Define the countries and cities
 countries = ["Netherlands", "Belgium", "Germany"]
@@ -63,9 +64,6 @@ for item in weather_data:
     # If the item contains the predicted weather data, print a line with the city name, the country, the predicted temperature, the predicted humidity, the predicted wind speed and the predicted weather description
     elif "temperature_forecast" in item:
         print(f"The forecast for tomorrow in {item['city']}, {item['country']} is: {item['temperature_forecast']}°C, {item['humidity_forecast']}% humidity, {item['wind_speed_forecast']} m/s wind and {item['weather_description_forecast']}.")
-
-# Import the matplotlib module
-import matplotlib.pyplot as plt
 
 # Create an empty list to store the city names
 city_names = []
