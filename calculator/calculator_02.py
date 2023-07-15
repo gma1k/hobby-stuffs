@@ -55,8 +55,8 @@ buttons = ["7", "8", "9", "+",
            "4", "5", "6", "-",
            "1", "2", "3", "*",
            "0", ".", "=", "/",
-           "C", "sqrt", "**", "sin", # Added these lines
-           "cos", "tan"] # Added these lines
+           "C", "sqrt", "**", "sin",
+           "cos", "tan"]
 
 # Create a list of button colors
 colors = ["lightgray", "lightgray", "lightgray", "orange",
