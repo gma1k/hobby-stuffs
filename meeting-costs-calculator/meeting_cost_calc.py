@@ -170,3 +170,14 @@ class Meeting:
 
     print(Fore.BLUE + f"{name} has been deleted from the meeting.")
     print(Style.RESET_ALL)
+    
+options = {}
+arg_parser = argparse.ArgumentParser(description="A python script that calculates the total cost of a meeting based on the number of people and their hourly rates")
+arg_parser.add_argument("-r", "--round", action="store_true", help="round the cost to an integer value")
+arg_parser.add_argument("-s", "--save", metavar="FILENAME", type=str, help="save the output to a file")
+options = vars(arg_parser.parse_args())
+meeting = Meeting.get_input(options)
+meeting.print_details()
+
+if options["save"]:
+  meeting.save_to_file(options["save"])
